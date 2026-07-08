@@ -41,3 +41,29 @@ CALL TransferFunds(1, 2, 500);
 SET SQL_SAFE_UPDATES = 1;
 
 SELECT * FROM Accounts;
+
+USE BankDB;
+
+DROP PROCEDURE IF EXISTS UpdateEmployeeBonus;
+
+DELIMITER $$
+
+CREATE PROCEDURE UpdateEmployeeBonus(
+    IN dept VARCHAR(50),
+    IN bonus DECIMAL(5,2)
+)
+BEGIN
+    UPDATE Employees
+    SET Salary = Salary + (Salary * bonus / 100)
+    WHERE Department = dept;
+END $$
+
+DELIMITER ;
+
+SET SQL_SAFE_UPDATES = 0;
+
+CALL UpdateEmployeeBonus('HR',10);
+
+SET SQL_SAFE_UPDATES = 1;
+
+SELECT * FROM Employees;
