@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                          http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Define BookRepository bean -->
+    <bean id="bookRepository" class="com.library.repository.BookRepository">
+        <!-- BookRepository uses default constructor and initializes with sample data -->
+    </bean>
+
+    <!-- Define BookService bean with dependency injection -->
+    <bean id="bookService" class="com.library.service.BookService">
+        <!-- Inject BookRepository using setter injection -->
+        <property name="bookRepository" ref="bookRepository" />
+    </bean>
+
+    <!-- Alternative configuration using constructor injection (commented out) -->
+    <!--
+    <bean id="bookServiceWithConstructor" class="com.library.service.BookService">
+        <constructor-arg ref="bookRepository" />
+    </bean>
+    -->
+
+</beans>

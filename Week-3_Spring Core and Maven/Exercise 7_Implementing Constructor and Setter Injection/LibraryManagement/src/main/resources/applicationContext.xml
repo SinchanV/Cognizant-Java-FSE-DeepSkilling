@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                          http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Define BookRepository bean -->
+    <bean id="bookRepository" class="com.library.repository.BookRepository">
+        <!-- BookRepository uses default constructor and initializes with sample data -->
+    </bean>
+
+    <!-- BookService with Constructor Injection (single parameter) -->
+    <bean id="bookServiceConstructor" class="com.library.service.BookService">
+        <constructor-arg ref="bookRepository" />
+    </bean>
+
+    <!-- BookService with Constructor Injection (multiple parameters) -->
+    <bean id="bookServiceConstructorMultiple" class="com.library.service.BookService">
+        <constructor-arg ref="bookRepository" />
+        <constructor-arg value="Advanced Constructor Injected Service" />
+        <constructor-arg value="true" />
+    </bean>
+
+    <!-- BookService with Setter Injection -->
+    <bean id="bookServiceSetter" class="com.library.service.BookService">
+        <!-- Use default constructor, then inject via setters -->
+        <property name="bookRepository" ref="bookRepository" />
+        <property name="serviceName" value="Setter Injected Book Service" />
+        <property name="enableLogging" value="true" />
+    </bean>
+
+    <!-- BookService with Mixed Injection (Constructor + Setter) -->
+    <bean id="bookServiceMixed" class="com.library.service.BookService">
+        <!-- Constructor injection for mandatory dependency -->
+        <constructor-arg ref="bookRepository" />
+        <!-- Setter injection for optional properties -->
+        <property name="serviceName" value="Mixed Injection Book Service" />
+        <property name="enableLogging" value="false" />
+    </bean>
+
+    <!-- Alternative configuration using index-based constructor arguments -->
+    <bean id="bookServiceConstructorIndexed" class="com.library.service.BookService">
+        <constructor-arg index="0" ref="bookRepository" />
+        <constructor-arg index="1" value="Index-based Constructor Service" />
+        <constructor-arg index="2" value="true" />
+    </bean>
+
+    <!-- Alternative configuration using type-based constructor arguments -->
+    <bean id="bookServiceConstructorTyped" class="com.library.service.BookService">
+        <constructor-arg type="com.library.repository.BookRepository" ref="bookRepository" />
+        <constructor-arg type="java.lang.String" value="Type-based Constructor Service" />
+        <constructor-arg type="boolean" value="true" />
+    </bean>
+
+</beans>
