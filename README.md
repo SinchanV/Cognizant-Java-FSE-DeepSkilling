@@ -1,46 +1,85 @@
-# Digital-Nurture-4.0-JavaFSE
+# Digital-Nurture-5.0-JavaFSE
 
 ## Program Introduction
 
-This repository is maintained as part of **Cognizant’s Digital Nurture 4.0 – Java Full Stack Engineering** deep skilling program. The program is designed to build strong full stack engineering capabilities using industry-relevant technologies, frameworks, and development practices.
+This repository contains my weekly hands-on exercises and assignments completed as part of the **Cognizant Digital Nurture 5.0 – Java Full Stack Engineering (Angular & React)** Deep Skilling Program.
 
-## Purpose of This Repository
+The program is designed to develop practical full-stack development skills through structured weekly assignments covering Java, Spring Boot, Microservices, React, Git, DevOps, Cloud, and GenAI fundamentals.
 
-The primary purpose of this repository is to document, organize, and submit the weekly mandatory hands-on coding exercises required by the Digital Nurture 4.0 program. Submitting these assignments is a critical requirement for assessment and successful program completion.
+---
 
-## Program Modules Overview
+## Program Objectives
 
-The **Java FSE** program covers several key modules, including:
+- Build strong Java Full Stack development skills.
+- Gain hands-on experience with Spring Boot and Microservices.
+- Learn frontend development using React.
+- Practice database programming using PL/SQL.
+- Develop RESTful APIs.
+- Understand Git, CI/CD, Docker, Cloud, and DevOps concepts.
+- Complete weekly coding assignments as part of the Digital Nurture 5.0 program.
 
-- **Core Java Programming**
-- **Spring Boot Framework**
-- **RESTful APIs Development**
-- **SQL & Database Management**
-- **Microservices Architecture**
-- **Frontend Development (React, JavaScript, HTML, CSS)**
-- **Agile & DevOps Fundamentals**
-- **Unit Testing & Code Quality Practices**
+---
 
-## Week-wise Folder Structure & Organization
+## Weekly Module Overview
 
-Exercises are organized in a clear, weekly manner for easy navigation and tracking:
+| Week | Topics Covered |
+|------|----------------|
+| **Week 1** | Design Patterns & Principles, Data Structures & Algorithms, PL/SQL Programming, Test Driven Development (JUnit 5 & Mockito), Logging Framework |
+| **Week 2** | Spring Core & Maven, Spring Data JPA with Spring Boot, Hibernate |
+| **Week 3** | Spring REST using Spring Boot 3 |
+| **Week 4** | Code Quality & SonarQube, Microservices with Spring Boot 3 & Spring Cloud |
+| **Week 5** | React |
+| **Week 6** | React, Git, CI/CD |
+| **Week 7** | DevOps, Docker, Cloud, and GenAI Fundamentals |
 
-```
-Digital-Nuture-4.0-JavaFSE/
-├── week-01/
-│   └── [exercise files]
-├── week-02/
-│   └── [exercise files]
-├── week-03/
-│   └── [exercise files]
-...
-├── week-n/
-│   └── [exercise files]
+---
+
+## Repository Structure
+
+```text
+Digital-Nurture-5.0-JavaFSE/
+│
+├── Data Structures and Algorithms
+├── Design Patterns and Principles
+├── PL SQL Programming
+├── Week-2_TDD using JUnit5 and Mockito
+├── Week-3_Spring Core and Maven
+├── Week-3_Spring Data JPA with Spring Boot
+├── Week-4_Spring REST using Spring Boot 3
+├── Week-5_Microservices with Spring Boot 3 and Spring Cloud
+├── Week-6_React
+├── Week-7_React
+├── Week-8_GIT
 └── README.md
 ```
 
-## Disclaimer
+---
 
-> This repository is part of an internal Cognizant learning initiative (Digital Nurture 4.0 – Java Full Stack Engineering). It is intended solely for training and assessment within Cognizant.
+## Technologies Used
+
+- Java
+- Data Structures & Algorithms
+- Design Patterns
+- PL/SQL
+- JUnit 5
+- Mockito
+- SLF4J Logging
+- Spring Core
+- Spring Boot
+- Spring Data JPA
+- Hibernate
+- Spring REST
+- Microservices
+- Spring Cloud
+- React
+- Git & GitHub
+- CI/CD
+- Docker
+- Cloud Fundamentals
+- GenAI Fundamentals
 
 ---
+
+## Note
+
+This repository is maintained as part of the **Cognizant Digital Nurture 5.0 – Java Full Stack Engineering (Angular & React)** Deep Skilling Program. It is intended for learning, practice, and submission of weekly hands-on exercises.
