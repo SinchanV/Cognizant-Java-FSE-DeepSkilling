@@ -1,0 +1,15 @@
+# Ignore all .log files
+*.log
+
+# Ignore log directories
+log/
+
+# Ignore any folder named logs (case variations)
+logs/
+Log/
+Logs/
+
+# Additional common log patterns
+*.log.*
+*.log.gz
+*.log.zip

@@ -1,0 +1,430 @@
+/* App Container */
+.App {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+
+/* Header Styles */
+.app-header {
+  text-align: center;
+  background: white;
+  color: #2c3e50;
+  padding: 40px 20px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.app-header h1 {
+  font-size: 3rem;
+  margin: 0 0 10px 0;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.app-header p {
+  font-size: 1.2rem;
+  margin: 0;
+  color: #7f8c8d;
+}
+
+/* Main Content */
+.main-content {
+  display: grid;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+/* Section Styles */
+section {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-5px);
+}
+
+section h2 {
+  color: #2c3e50;
+  font-size: 1.8rem;
+  margin: 0 0 20px 0;
+  text-align: center;
+  border-bottom: 3px solid #667eea;
+  padding-bottom: 10px;
+}
+
+/* Counter Section */
+.counter-section {
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+}
+
+.counter-display {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.counter-value {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #2c3e50;
+  background: white;
+  padding: 20px 40px;
+  border-radius: 50px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  min-width: 150px;
+}
+
+.counter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 30px 0;
+  flex-wrap: wrap;
+}
+
+/* Button Styles */
+.btn {
+  padding: 15px 25px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  min-width: 180px;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.increment-btn {
+  background: linear-gradient(135deg, #4CAF50, #45a049);
+  color: white;
+}
+
+.decrement-btn {
+  background: linear-gradient(135deg, #f44336, #d32f2f);
+  color: white;
+}
+
+.welcome-btn {
+  background: linear-gradient(135deg, #2196F3, #1976D2);
+  color: white;
+  display: block;
+  margin: 20px auto;
+}
+
+.synthetic-btn {
+  background: linear-gradient(135deg, #FF9800, #F57C00);
+  color: white;
+  display: block;
+  margin: 20px auto;
+}
+
+/* Info Box */
+.info-box {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  border-left: 5px solid #667eea;
+}
+
+.info-box ul {
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+.info-box li {
+  margin: 5px 0;
+  color: #2c3e50;
+}
+
+/* Welcome Section */
+.welcome-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.welcome-section h2 {
+  color: white;
+  border-bottom-color: white;
+}
+
+/* Synthetic Event Section */
+.synthetic-event-section {
+  background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
+}
+
+.description {
+  text-align: center;
+  font-style: italic;
+  color: #7f8c8d;
+  margin: 15px 0;
+}
+
+.event-info {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.event-info h4 {
+  color: #2c3e50;
+  margin: 0 0 10px 0;
+}
+
+/* Currency Converter Styles */
+.currency-converter {
+  margin-top: 20px;
+}
+
+.converter-container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.converter-form {
+  background: #f8f9fa;
+  padding: 25px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #2c3e50;
+  font-size: 1.1rem;
+}
+
+.currency-symbol {
+  font-size: 1.3rem;
+  color: #e67e22;
+  margin-right: 5px;
+}
+
+.currency-input {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.currency-input:focus {
+  border-color: #667eea;
+  outline: none;
+  box-shadow: 0 0 10px rgba(102, 126, 234, 0.3);
+}
+
+.button-group {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.convert-btn {
+  background: linear-gradient(135deg, #00b894, #00a085);
+  color: white;
+  flex: 1;
+}
+
+.convert-btn:disabled {
+  background: #bdc3c7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.reset-btn {
+  background: linear-gradient(135deg, #636e72, #2d3436);
+  color: white;
+  flex: 1;
+}
+
+/* Result Container */
+.result-container {
+  background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+  color: white;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.conversion-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.from-currency, .to-currency {
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: white;
+  color: #2c3e50;
+  padding: 10px 20px;
+  border-radius: 25px;
+}
+
+.arrow {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.rate-info {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin: 10px 0 0 0;
+}
+
+/* Additional Events Section */
+.additional-events {
+  background: linear-gradient(135deg, #fd79a8 0%, #e84393 100%);
+  color: white;
+}
+
+.additional-events h2 {
+  color: white;
+  border-bottom-color: white;
+}
+
+.event-examples-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.event-card {
+  background: white;
+  color: #2c3e50;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.event-card h4 {
+  margin: 0 0 15px 0;
+  color: #667eea;
+  text-align: center;
+}
+
+.event-input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.hover-box {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px dashed #667eea;
+}
+
+.hover-box:hover {
+  background: #667eea;
+  color: white;
+  transform: scale(1.05);
+}
+
+.converter-info {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.converter-info h4 {
+  color: #2c3e50;
+  margin: 0 0 10px 0;
+}
+
+/* Footer */
+.app-footer {
+  text-align: center;
+  padding: 30px;
+  background: white;
+  color: #2c3e50;
+  border-radius: 15px;
+  margin-top: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .App {
+    padding: 10px;
+  }
+  
+  .app-header h1 {
+    font-size: 2rem;
+  }
+  
+  .counter-value {
+    font-size: 3rem;
+    padding: 15px 30px;
+  }
+  
+  .counter-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn {
+    min-width: 250px;
+  }
+  
+  .conversion-display {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .button-group {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,379 @@
+/* Animation Effects for Conditional Rendering Demo */
+
+/* Fade In Animations */
+@keyframes fadeIn {
+  from { 
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from { 
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from { 
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 10px rgba(102, 126, 234, 0.3); }
+  50% { box-shadow: 0 0 20px rgba(102, 126, 234, 0.6); }
+  100% { box-shadow: 0 0 10px rgba(102, 126, 234, 0.3); }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+  20%, 40%, 60%, 80% { transform: translateX(10px); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Apply Animations to Components */
+.book-card {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.blog-card {
+  animation: fadeInLeft 0.6s ease-out;
+}
+
+.course-card {
+  animation: fadeInRight 0.7s ease-out;
+}
+
+.conditional-section {
+  animation: slideUp 0.4s ease-out;
+}
+
+.premium-badge {
+  animation: pulse 2s infinite;
+}
+
+.popular-badge {
+  animation: glow 2s infinite;
+}
+
+.loading-spinner .spinner {
+  animation: rotate 1s linear infinite;
+}
+
+.welcome-banner {
+  animation: slideDown 0.5s ease-out;
+}
+
+.nav-btn:hover {
+  animation: float 0.6s ease-in-out;
+}
+
+.theme-toggle:hover {
+  animation: rotate 0.3s ease-in-out;
+}
+
+.fab:hover {
+  animation: bounceIn 0.3s ease-out;
+}
+
+/* Conditional Rendering Animation Classes */
+.fade-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.fade-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.slide-enter {
+  transform: translateX(-100%);
+}
+
+.slide-enter-active {
+  transform: translateX(0);
+  transition: transform 0.4s ease;
+}
+
+.slide-exit {
+  transform: translateX(0);
+}
+
+.slide-exit-active {
+  transform: translateX(100%);
+  transition: transform 0.4s ease;
+}
+
+/* Skeleton Loading for Conditional Rendering */
+.skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+.skeleton-text {
+  height: 20px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.skeleton-title {
+  height: 30px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.skeleton-card {
+  height: 200px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+/* Error State Animations */
+.error-shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+.error-message {
+  animation: fadeIn 0.3s ease-out;
+  background: linear-gradient(135deg, #ff6b6b, #ff5252);
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.success-message {
+  animation: slideUp 0.4s ease-out;
+  background: linear-gradient(135deg, #51cf66, #40c057);
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+/* Tooltip Animations */
+.tooltip {
+  position: relative;
+}
+
+.tooltip:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #2c3e50;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  animation: fadeIn 0.2s ease-out;
+  z-index: 1000;
+}
+
+/* Interactive Element Animations */
+.interactive-hover:hover {
+  animation: pulse 0.3s ease-in-out;
+}
+
+.button-click {
+  animation: bounceIn 0.2s ease-out;
+}
+
+.input-focus {
+  animation: glow 0.3s ease-out;
+}
+
+/* Staggered Animation for Lists */
+.stagger-item:nth-child(1) { animation-delay: 0.1s; }
+.stagger-item:nth-child(2) { animation-delay: 0.2s; }
+.stagger-item:nth-child(3) { animation-delay: 0.3s; }
+.stagger-item:nth-child(4) { animation-delay: 0.4s; }
+.stagger-item:nth-child(5) { animation-delay: 0.5s; }
+.stagger-item:nth-child(6) { animation-delay: 0.6s; }
+
+/* Responsive Animation Adjustments */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .book-card, .blog-card, .course-card {
+    animation-duration: 0.3s;
+  }
+  
+  .welcome-banner {
+    animation-duration: 0.3s;
+  }
+}
+
+/* Dark Mode Animation Overrides */
+.dark-mode .skeleton {
+  background: linear-gradient(90deg, #34495e 25%, #2c3e50 50%, #34495e 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+.dark-mode .error-message {
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+
+.dark-mode .success-message {
+  background: linear-gradient(135deg, #27ae60, #229954);
+}
+
+/* Loading Dots Animation */
+.loading-dots::after {
+  content: '';
+  animation: loading-dots 2s infinite;
+}
+
+@keyframes loading-dots {
+  0%, 20% { content: '.'; }
+  40% { content: '..'; }
+  60%, 100% { content: '...'; }
+}
+
+/* Notification Animation */
+.notification {
+  animation: slideInRight 0.5s ease-out;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Progress Bar Animation */
+.progress-bar {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  background-size: 200% 200%;
+  animation: gradient 3s ease infinite;
+}
+
+/* Typewriter Effect */
+.typewriter {
+  overflow: hidden;
+  border-right: 2px solid #667eea;
+  white-space: nowrap;
+  animation: typing 3s steps(40, end), blink 0.75s step-end infinite;
+}
